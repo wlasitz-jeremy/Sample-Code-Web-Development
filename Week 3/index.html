@@ -1,0 +1,94 @@
+<main>
+  <header>
+    <h1>HTML Form Basics</h1>
+    <p>Example from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form">MDN Documentation</a></p>
+  </header>
+  <section>
+    <h2>Tasks to Practice</h2>
+    <ol>
+      <li>copy this codepen to practice editing and adding.</li>
+      <li>try changing the information, for-id, name, value field</li>
+      <li>add other form input types based on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input" target="_blank">mdn docs</a> (start with simple ones like number)</li>
+      <li>Try recreating a form from scratch</li>
+    </ol>
+  </section>
+  <form action="" method="get" class="form-example">
+
+    <div class="form-example">
+      <label for="name">Enter your Name: </label>
+      <input type="text" name="name" id="name" required />
+    </div>
+
+    <div class="form-example">
+      <label for="email">Enter your email: </label>
+      <input type="email" name="email" id="email" required />
+    </div>
+    <!--  is fieldset checkbox specific?    -->
+    <fieldset>
+      <!--  is legend specific to fieldset?      -->
+      <legend>Choose your monster's features:</legend>
+
+      <div>
+        <!--   input and label don't always have to be in the same order, they are related by for and id       -->
+        <!--    is there a way to say that at least 1 has to be checked?      -->
+        <input type="checkbox" id="scales" name="scales" />
+        <label for="scales">Scales</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="horns" name="horns" />
+        <label for="horns">Horns</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Select a maintenance drone:</legend>
+
+      <div>
+        <input type="radio" id="huey" name="drone" value="huey" checked />
+        <label for="huey">Huey</label>
+      </div>
+
+      <div>
+        <input type="radio" id="dewey" name="drone" value="dewey" />
+        <label for="dewey">Dewey</label>
+      </div>
+
+      <div>
+        <input type="radio" id="louie" name="drone" value="louie" />
+        <label for="louie">Louie</label>
+      </div>
+    </fieldset>
+    <div class="form-example">
+      <!--  what's the difference between a button and input type submit?   -->
+      <input type="submit" value="Subscribe!" />
+    </div>
+
+  </form>
+  <section>
+    <header>
+      <h2>Notes on Forms</h2>
+    </header>
+    <div>
+      <h3>Form Field Specific Notes</h3>
+      <ul>
+        <li>GET Request method requests information <strong>from</strong> the server</li>
+        <li>POST Request method sends information <strong>to</strong> the server</li>
+        <li>Action attribute is the url that the user is taken to on submit</li>
+        <li>label for attribute connects the label to the element with the matching id</li>
+        <li>the name attribute in an input field labels the information to send it to the server</li>
+        <li>required field will stop the form from submitting without it being entered</li>
+        <li>minlength and maxlength can be used to specify field length to the user</li>
+        <li>checkboxes are designed for users to be able to select more than 1 option</li>
+        <li>radio buttons are used when a user can only select 1 thing from a set</li>
+        <li>in radio buttons, the <strong>value attribute</strong> is the information that is sent to the server. it's referred to as whatever is specified in the <strong>name attribute</strong>.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Notes not specific to forms</h3>
+      <ul>
+        <li>class is used to assign css or javascript to that particular element</li>
+        <li>Divs are used for grouping information. helps when elements are inline but need to be in blocks</li>
+      </ul>
+    </div>
+  </section>
+</main>
